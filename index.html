@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shavira Zakiya Rahmah — Student Profile</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Tambahan -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand brand-custom" href="#home">
+        <i class="bi bi-mortarboard-fill"></i>
+        <span>Student Profile</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-md-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#academic">Academic</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Kartu ID Mahasiswa -->
+        <div class="col-lg-5">
+          <div class="id-card">
+            <div class="id-card-top">
+              <span class="id-card-label">Kartu Akademik Digital</span>
+              <i class="bi bi-mortarboard id-card-icon"></i>
+            </div>
+
+            <div class="id-card-avatar">
+              <i class="bi bi-person-fill"></i>
+            </div>
+
+            <h2 class="id-card-name">Shavira Zakiya Rahmah</h2>
+            <p class="id-card-major">Sistem dan Teknologi Informasi</p>
+            <p class="id-card-univ">Universitas 17 Agustus 1945 Surabaya</p>
+
+            <div class="id-card-footer">
+              <div>
+                <span class="id-card-footer-label">NBI</span>
+                <span class="id-card-number">1482500004</span>
+              </div>
+              <div class="text-end">
+                <span class="id-card-footer-label">Semester</span>
+                <span class="id-card-number">3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teks Hero -->
+        <div class="col-lg-7">
+          <p class="hero-eyebrow">My Student Profile</p>
+          <h1 class="hero-title">Shavira Zakiya <br> Rahmah</h1>
+          <p class="hero-desc">
+            Mahasiswa Program Studi Sistem dan Teknologi Informasi,
+            Universitas 17 Agustus 1945 Surabaya. Halaman ini merangkum
+            data diri, riwayat nilai mata kuliah, dan capaian akademik
+            selama masa perkuliahan.
+          </p>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">3</span>
+              <span class="hero-stat-label">Semester berjalan</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">38</span>
+              <span class="hero-stat-label">Total SKS ditempuh</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">3.75</span>
+              <span class="hero-stat-label">IPK sementara</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PERSONAL INFORMATION ============ -->
+  <section id="profile" class="section-block">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-index">Profile</span>
+        <h2>Personal Information</h2>
+      </div>
+
+      <div class="info-panel">
+        <div class="row g-0">
+
+          <div class="col-md-6 info-row">
+            <div class="info-icon"><i class="bi bi-person-badge"></i></div>
+            <div>
+              <p class="info-label">Nama Lengkap</p>
+              <p class="info-value">Shavira Zakiya Rahmah</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 info-row">
+            <div class="info-icon"><i class="bi bi-hash"></i></div>
+            <div>
+              <p class="info-label">NBI</p>
+              <p class="info-value">1482500004</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 info-row">
+            <div class="info-icon"><i class="bi bi-journal-bookmark"></i></div>
+            <div>
+              <p class="info-label">Program Studi</p>
+              <p class="info-value">Sistem dan Teknologi Informasi</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 info-row">
+            <div class="info-icon"><i class="bi bi-bank"></i></div>
+            <div>
+              <p class="info-label">Universitas</p>
+              <p class="info-value">Universitas 17 Agustus 1945 Surabaya</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACADEMIC SCORES ============ -->
+  <section id="academic" class="section-block section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-index">Academic</span>
+        <h2>Academic Scores</h2>
+        <p class="section-sub">Riwayat nilai mata kuliah yang telah ditempuh, semester 1 dan semester 2.</p>
+      </div>
+
+      <div class="table-responsive ledger-wrap">
+        <table class="table table-bordered table-hover align-middle ledger-table">
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Kode</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col">Semester</th>
+              <th scope="col">SKS</th>
+              <th scope="col">Nilai</th>
+              <th scope="col">N.K.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>14823393</td><td>Interaksi Manusia Komputer</td><td>2</td><td>3</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
+            </tr>
+            <tr>
+              <td>2</td><td>14823372</td><td>Statistika dan Probabilitas</td><td>2</td><td>2</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
+            </tr>
+            <tr>
+              <td>3</td><td>14823333</td><td>Algoritma dan Struktur Data</td><td>2</td><td>3</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
+            </tr>
+            <tr>
+              <td>4</td><td>14823313</td><td>Sistem Basis Data</td><td>2</td><td>3</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
+            </tr>
+            <tr>
+              <td>5</td><td>14823274</td><td>Pemrograman Berorientasi Objek</td><td>2</td><td>4</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>16.00</td>
+            </tr>
+            <tr>
+              <td>6</td><td>14823192</td><td>Arsitektur dan Organisasi Komputer</td><td>2</td><td>2</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
+            </tr>
+            <tr>
+              <td>7</td><td>14823153</td><td>Teknologi Informasi dan Aplikasi Bisnis Berkembang</td><td>2</td><td>3</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
+            </tr>
+            <tr>
+              <td>8</td><td>14823532</td><td>Bahasa Inggris</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
+            </tr>
+            <tr>
+              <td>9</td><td>14823352</td><td>Matematika Diskrit</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
+            </tr>
+            <tr>
+              <td>10</td><td>14823012</td><td>Etika Pengembangan Teknologi Siber</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
+            </tr>
+            <tr>
+              <td>11</td><td>14823323</td><td>Dasar Pemrograman**</td><td>1</td><td>3</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
+            </tr>
+            <tr>
+              <td>12</td><td>14823342</td><td>Aljabar Linier</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
+            </tr>
+            <tr>
+              <td>13</td><td>14823362</td><td>Kalkulus</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-b">B</span></td><td>6.00</td>
+            </tr>
+            <tr>
+              <td>14</td><td>14823202</td><td>Sistem Operasi</td><td>1</td><td>2</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
+            </tr>
+            <tr>
+              <td>15</td><td>14823103</td><td>Konsep dan Fondasi Sistem Informasi</td><td>1</td><td>3</td>
+              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4" class="text-end fw-semibold">Jumlah SKS</td>
+              <td class="fw-semibold">38</td>
+              <td colspan="2"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACADEMIC SUMMARY (IPK) ============ -->
+  <section class="section-block">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-index">Summary</span>
+        <h2>Academic Summary</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="table-responsive summary-wrap">
+            <table class="table table-bordered align-middle summary-table mb-0">
+              <tbody>
+                <tr>
+                  <td class="summary-key">Total SKS Ditempuh</td>
+                  <td class="summary-val">38</td>
+                </tr>
+                <tr>
+                  <td class="summary-key">Total Nilai Konversi (N.K.)</td>
+                  <td class="summary-val">142.50</td>
+                </tr>
+                <tr class="ipk-row">
+                  <td class="summary-key">IPK (Indeks Prestasi Kumulatif)</td>
+                  <td class="summary-val ipk-value">3.75</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="summary-note">
+            <i class="bi bi-info-circle"></i>
+            IPK dihitung dari total N.K. dibagi total SKS pada data nilai di atas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer-section">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 Shavira Zakiya Rahmah</p>
+      <p class="mb-0 footer-sub">Sistem dan Teknologi Informasi — Universitas 17 Agustus 1945 Surabaya</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+</body>
+</html>
