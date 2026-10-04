@@ -457,3 +457,14 @@ h1, h2, h3 {
     padding: 3rem 0;
   }
 }
+/* =========================================================
+   TUGAS DOM & EVENTS
+   ========================================================= */
+.sembunyi {
+  display: none !important;
+}
+
+.baris-baru {
+  background-color: var(--gold-soft) !important;
+  transition: background-color 1s;
+}

@@ -162,6 +162,28 @@
         <p class="section-sub">Riwayat nilai mata kuliah yang telah ditempuh, semester 1 dan semester 2.</p>
       </div>
 
+      <!-- TEMPAT PENCARIAN & FORM TAMBAH DATA -->
+      <div class="row mb-4 mt-4">
+        <div class="col-md-12 mb-3">
+          <input type="text" id="inputCari" class="form-control" placeholder="Cari nama mata kuliah...">
+        </div>
+        <div class="col-md-12">
+          <form id="formTambah" class="d-flex gap-2 flex-wrap">
+            <input type="text" id="inputKode" class="form-control w-auto" placeholder="Kode (ex: 1482)" required>
+            <input type="text" id="inputNamaMK" class="form-control" placeholder="Nama Mata Kuliah" style="flex: 1; min-width: 200px;" required>
+            <input type="number" id="inputSks" class="form-control w-auto" placeholder="SKS" min="1" max="4" required>
+            <select id="inputGrade" class="form-select w-auto" required>
+              <option value="" disabled selected>Pilih Grade</option>
+              <option value="A">A</option>
+              <option value="AB">AB</option>
+              <option value="B">B</option>
+            </select>
+            <button type="submit" class="btn btn-primary" style="background-color: var(--navy); border:none;">Tambah Data</button>
+          </form>
+        </div>
+      </div>
+      <!-- AKHIR TEMPAT PENCARIAN & FORM -->
+
       <div class="table-responsive ledger-wrap">
         <table class="table table-bordered table-hover align-middle ledger-table">
           <thead>
@@ -175,73 +197,13 @@
               <th scope="col">N.K.</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td><td>14823393</td><td>Interaksi Manusia Komputer</td><td>2</td><td>3</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
-            </tr>
-            <tr>
-              <td>2</td><td>14823372</td><td>Statistika dan Probabilitas</td><td>2</td><td>2</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
-            </tr>
-            <tr>
-              <td>3</td><td>14823333</td><td>Algoritma dan Struktur Data</td><td>2</td><td>3</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
-            </tr>
-            <tr>
-              <td>4</td><td>14823313</td><td>Sistem Basis Data</td><td>2</td><td>3</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>12.00</td>
-            </tr>
-            <tr>
-              <td>5</td><td>14823274</td><td>Pemrograman Berorientasi Objek</td><td>2</td><td>4</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>16.00</td>
-            </tr>
-            <tr>
-              <td>6</td><td>14823192</td><td>Arsitektur dan Organisasi Komputer</td><td>2</td><td>2</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
-            </tr>
-            <tr>
-              <td>7</td><td>14823153</td><td>Teknologi Informasi dan Aplikasi Bisnis Berkembang</td><td>2</td><td>3</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
-            </tr>
-            <tr>
-              <td>8</td><td>14823532</td><td>Bahasa Inggris</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
-            </tr>
-            <tr>
-              <td>9</td><td>14823352</td><td>Matematika Diskrit</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
-            </tr>
-            <tr>
-              <td>10</td><td>14823012</td><td>Etika Pengembangan Teknologi Siber</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
-            </tr>
-            <tr>
-              <td>11</td><td>14823323</td><td>Dasar Pemrograman**</td><td>1</td><td>3</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
-            </tr>
-            <tr>
-              <td>12</td><td>14823342</td><td>Aljabar Linier</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-a">A</span></td><td>8.00</td>
-            </tr>
-            <tr>
-              <td>13</td><td>14823362</td><td>Kalkulus</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-b">B</span></td><td>6.00</td>
-            </tr>
-            <tr>
-              <td>14</td><td>14823202</td><td>Sistem Operasi</td><td>1</td><td>2</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>7.00</td>
-            </tr>
-            <tr>
-              <td>15</td><td>14823103</td><td>Konsep dan Fondasi Sistem Informasi</td><td>1</td><td>3</td>
-              <td><span class="grade-badge grade-ab">AB</span></td><td>10.50</td>
-            </tr>
+          <tbody id="tabelNilaiBody">
+            <!-- Data akan di-render di sini oleh JavaScript -->
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="4" class="text-end fw-semibold">Jumlah SKS</td>
-              <td class="fw-semibold">38</td>
-              <td colspan="2"></td>
+              <td colspan="4" class="text-end fw-semibold">Data Dinamis via DOM</td>
+              <td colspan="3"></td>
             </tr>
           </tfoot>
         </table>
@@ -279,7 +241,7 @@
           </div>
           <p class="summary-note">
             <i class="bi bi-info-circle"></i>
-            IPK dihitung dari total N.K. dibagi total SKS pada data nilai di atas.
+            Catatan: Ringkasan ini adalah data statis, sedangkan tabel di atas adalah data dinamis manipulasi DOM.
           </p>
         </div>
       </div>
@@ -298,9 +260,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Menghubungkan file JavaScript -->
-    <script src="script.js"></script>
-  </body>
-</html>
-
+  <script src="script.js"></script>
 </body>
 </html>
